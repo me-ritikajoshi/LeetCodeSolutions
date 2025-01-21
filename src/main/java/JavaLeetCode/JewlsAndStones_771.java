@@ -2,24 +2,15 @@ package JavaLeetCode;
 
 public class JewlsAndStones_771 {
     public static void main(String[] args) {
-        String jewels="z";
-        String stones="ZZ";
+        String jewels="aA";
+        String stones="aAAbbbb";
         System.out.println(numJewelsInStones(jewels,stones));
     }
     public static int numJewelsInStones(String jewels, String stones) {
         int count=0;
-        char[] jewlsChar=jewels.toCharArray();
-        char[] stonesChar=stones.toCharArray();
-
-        for (int i = 0; i < stonesChar.length; i++) {
-            for (int j = 0; j < jewlsChar.length; j++) {
-                if(jewlsChar[j]==stonesChar[i]){
-                    count++;
-                }
-            }
-            
-        }
-
+        for (int i = 0; i < stones.length(); i++)
+            for (int j = 0; j < jewels.length(); j++)
+                if(jewels.charAt(j) == stones.charAt(i)) count++;
         return count;
     }
 }

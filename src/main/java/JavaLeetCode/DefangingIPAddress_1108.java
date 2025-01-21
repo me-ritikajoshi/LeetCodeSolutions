@@ -7,7 +7,6 @@ public class DefangingIPAddress_1108 {
 
     }
     public static String defangIPaddr(String address) {
-        address = address.replace(".", "[.]");
-        return address;
+        return address.replace(".", "[.]");
     }
 }

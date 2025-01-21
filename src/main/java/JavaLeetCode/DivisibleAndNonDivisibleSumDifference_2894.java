@@ -39,16 +39,9 @@ public class DivisibleAndNonDivisibleSumDifference_2894 {
         int sumOfNotDivisible=0;
 
         for (int i = 1; i <= n; i++) {
-            if(i%m==0){
-                sumOfDivisible+=i;
-
-            }else{
-                sumOfNotDivisible+=i;
-            }
+            if(i%m==0) sumOfDivisible+=i;
+            else sumOfNotDivisible+=i;
         }
-
-        int difference=sumOfNotDivisible-sumOfDivisible;
-        return difference;
-
+        return sumOfNotDivisible-sumOfDivisible;
     }
 }
