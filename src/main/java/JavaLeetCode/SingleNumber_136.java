@@ -16,7 +16,6 @@ public class SingleNumber_136 {
             }else{
                 countMaps.put(num,1);
             }
-
         }
         for (Map.Entry<Integer, Integer> entry : countMaps.entrySet()) {
             if (entry.getValue() == 1) {
